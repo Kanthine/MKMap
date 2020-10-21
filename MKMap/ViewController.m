@@ -30,6 +30,12 @@
     [super viewDidAppear:animated];
     [self.mapView addAnnotation:self.userMarker];
     [self.mapView addAnnotation:self.horsemanMarker];
+    
+    NSArray *polylines = [self.mapView.overlays copy];
+    [polylines enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.mapView removeOverlay:obj];
+    }];
+    
     [MKMapTools routePlanWithStart:self.horsemanMarker.coordinate end:self.userMarker.coordinate handler:^(MKDirectionsResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"路线条数 ===== %lu", (unsigned long)response.routes.count);
         MKRoute *route = [MKMapTools getFastestTimeRouteWithRoutes:response.routes];
