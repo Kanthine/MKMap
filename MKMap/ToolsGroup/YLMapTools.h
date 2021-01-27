@@ -1,5 +1,5 @@
 //
-//  MKMapTools.h
+//  YLMapTools.h
 //  MKMap
 //
 //  Created by 苏沫离 on 2020/10/21.
@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKMapTools : NSObject
+@interface YLMapTools : NSObject
+
+
+
+@end
+
+
+/// 路线设计
+@interface YLMapTools (Route)
 
 ///获取某条路线的达到时间
 + (NSString *)arriveTimeByRoute:(MKRoute *)route;
@@ -26,6 +34,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @param end   终点坐标
  */
 + (void)routePlanWithStart:(CLLocationCoordinate2D)start end:(CLLocationCoordinate2D)end handler:(MKDirectionsHandler)completionHandler;
+
+@end
+
+
+/// 地址编码
+@interface YLMapTools (Geocode)
+
++ (void)getPlacemarkByLocation:(CLLocation *)location place:(void(^)(CLPlacemark *placeMark))handler;
 
 @end
 

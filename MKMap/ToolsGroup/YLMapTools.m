@@ -1,13 +1,19 @@
 //
-//  MKMapTools.m
+//  YLMapTools.m
 //  MKMap
 //
 //  Created by 苏沫离 on 2020/10/21.
 //
 
-#import "MKMapTools.h"
+#import "YLMapTools.h"
 
-@implementation MKMapTools
+@implementation YLMapTools
+
+@end
+
+
+
+@implementation YLMapTools (Route)
 
 + (NSString *)arriveTimeByRoute:(MKRoute *)route{
     ///YYYY-MM-dd HH:mm:ss
@@ -66,6 +72,21 @@
     MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
     //5.计算所有路线
     [directions calculateDirectionsWithCompletionHandler:completionHandler];
+}
+
+
+@end
+
+
+@implementation YLMapTools (Geocode)
+
++ (void)getPlacemarkByLocation:(CLLocation *)location place:(void(^)(CLPlacemark *placeMark))handler{
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (placemarks.count) {
+            handler(placemarks.firstObject);
+        }
+    }];
 }
 
 @end

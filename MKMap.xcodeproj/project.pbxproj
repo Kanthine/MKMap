@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1A7EBEA62540136F000921C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EBEA52540136F000921C7 /* AppDelegate.m */; };
-		1A7EBEAC2540136F000921C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EBEAB2540136F000921C7 /* ViewController.m */; };
 		1A7EBEB125401370000921C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7EBEB025401370000921C7 /* Assets.xcassets */; };
 		1A7EBEB425401370000921C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7EBEB225401370000921C7 /* LaunchScreen.storyboard */; };
 		1A7EBEB725401370000921C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EBEB625401370000921C7 /* main.m */; };
-		1A7EBEC4254013D8000921C7 /* MKMarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EBEC2254013D8000921C7 /* MKMarkerView.m */; };
-		1A7EBEC5254013D8000921C7 /* MKMapTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EBEC3254013D8000921C7 /* MKMapTools.m */; };
+		F7916EBB25C1817300B6C303 /* YLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7916EB825C1817300B6C303 /* YLLocationManager.m */; };
+		F7916EBF25C1821100B6C303 /* YLMapTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F7916EBE25C1821100B6C303 /* YLMapTools.m */; };
+		F7916EC825C1846000B6C303 /* MKMarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7916EC425C1846000B6C303 /* MKMarkerView.m */; };
+		F7916EC925C1846000B6C303 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7916EC625C1846000B6C303 /* ViewController.m */; };
+		F7916ECD25C1848800B6C303 /* YLRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7916ECC25C1848800B6C303 /* YLRouteViewController.m */; };
+		F7916ED125C185B600B6C303 /* YLPlaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7916ED025C185B600B6C303 /* YLPlaceModel.m */; };
 		F7A1A04325B99B5000911238 /* AlbumMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A1A02925B99B5000911238 /* AlbumMainViewController.m */; };
 		F7A1A04425B99B5000911238 /* PhotoAlbumLocalized.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7A1A02A25B99B5000911238 /* PhotoAlbumLocalized.strings */; };
 		F7A1A04525B99B5000911238 /* AlbumGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A1A02E25B99B5000911238 /* AlbumGroupViewController.m */; };
@@ -25,23 +28,28 @@
 		F7A1A04B25B99B5000911238 /* PHAsset+MediaStreams.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A1A04025B99B5000911238 /* PHAsset+MediaStreams.m */; };
 		F7A1A04C25B99B5000911238 /* MediaStreamsResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F7A1A04125B99B5000911238 /* MediaStreamsResource.bundle */; };
 		F7A1A04D25B99B5000911238 /* EditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A1A04225B99B5000911238 /* EditPhotoViewController.m */; };
-		F7A48CE325BEAAEC0085B372 /* YLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A48CE225BEAAEC0085B372 /* YLLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A7EBEA12540136F000921C7 /* MKMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7EBEA42540136F000921C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A7EBEA52540136F000921C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1A7EBEAA2540136F000921C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A7EBEAB2540136F000921C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A7EBEB025401370000921C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A7EBEB325401370000921C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A7EBEB525401370000921C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7EBEB625401370000921C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1A7EBEC0254013D8000921C7 /* MKMarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMarkerView.h; sourceTree = "<group>"; };
-		1A7EBEC1254013D8000921C7 /* MKMapTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapTools.h; sourceTree = "<group>"; };
-		1A7EBEC2254013D8000921C7 /* MKMarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMarkerView.m; sourceTree = "<group>"; };
-		1A7EBEC3254013D8000921C7 /* MKMapTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapTools.m; sourceTree = "<group>"; };
+		F7916EB625C1817300B6C303 /* YLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationManager.h; sourceTree = "<group>"; };
+		F7916EB825C1817300B6C303 /* YLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationManager.m; sourceTree = "<group>"; };
+		F7916EBD25C1821100B6C303 /* YLMapTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLMapTools.h; sourceTree = "<group>"; };
+		F7916EBE25C1821100B6C303 /* YLMapTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLMapTools.m; sourceTree = "<group>"; };
+		F7916EC325C1846000B6C303 /* MKMarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMarkerView.h; sourceTree = "<group>"; };
+		F7916EC425C1846000B6C303 /* MKMarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMarkerView.m; sourceTree = "<group>"; };
+		F7916EC625C1846000B6C303 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7916EC725C1846000B6C303 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7916ECB25C1848800B6C303 /* YLRouteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLRouteViewController.h; sourceTree = "<group>"; };
+		F7916ECC25C1848800B6C303 /* YLRouteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLRouteViewController.m; sourceTree = "<group>"; };
+		F7916ECF25C185B600B6C303 /* YLPlaceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLPlaceModel.h; sourceTree = "<group>"; };
+		F7916ED025C185B600B6C303 /* YLPlaceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLPlaceModel.m; sourceTree = "<group>"; };
 		F7A1A02925B99B5000911238 /* AlbumMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumMainViewController.m; sourceTree = "<group>"; };
 		F7A1A02B25B99B5000911238 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PhotoAlbumLocalized.strings"; sourceTree = "<group>"; };
 		F7A1A02C25B99B5000911238 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PhotoAlbumLocalized.strings; sourceTree = "<group>"; };
@@ -64,8 +72,6 @@
 		F7A1A04025B99B5000911238 /* PHAsset+MediaStreams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+MediaStreams.m"; sourceTree = "<group>"; };
 		F7A1A04125B99B5000911238 /* MediaStreamsResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MediaStreamsResource.bundle; sourceTree = "<group>"; };
 		F7A1A04225B99B5000911238 /* EditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhotoViewController.m; sourceTree = "<group>"; };
-		F7A48CE125BEAAEC0085B372 /* YLLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLLocationManager.h; sourceTree = "<group>"; };
-		F7A48CE225BEAAEC0085B372 /* YLLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,14 +106,9 @@
 			children = (
 				1A7EBEA42540136F000921C7 /* AppDelegate.h */,
 				1A7EBEA52540136F000921C7 /* AppDelegate.m */,
-				1A7EBEAA2540136F000921C7 /* ViewController.h */,
-				1A7EBEAB2540136F000921C7 /* ViewController.m */,
-				F7A48CE125BEAAEC0085B372 /* YLLocationManager.h */,
-				F7A48CE225BEAAEC0085B372 /* YLLocationManager.m */,
-				1A7EBEC1254013D8000921C7 /* MKMapTools.h */,
-				1A7EBEC3254013D8000921C7 /* MKMapTools.m */,
-				1A7EBEC0254013D8000921C7 /* MKMarkerView.h */,
-				1A7EBEC2254013D8000921C7 /* MKMarkerView.m */,
+				F7916EC525C1846000B6C303 /* ControllersGroup */,
+				F7916EC225C1846000B6C303 /* ViewsGroup */,
+				F7916EB525C1817300B6C303 /* ToolsGroup */,
 				F7A1A02825B99B5000911238 /* PhotoAlbumGroup */,
 				1A7EBEB025401370000921C7 /* Assets.xcassets */,
 				1A7EBEB225401370000921C7 /* LaunchScreen.storyboard */,
@@ -115,6 +116,39 @@
 				1A7EBEB625401370000921C7 /* main.m */,
 			);
 			path = MKMap;
+			sourceTree = "<group>";
+		};
+		F7916EB525C1817300B6C303 /* ToolsGroup */ = {
+			isa = PBXGroup;
+			children = (
+				F7916EBD25C1821100B6C303 /* YLMapTools.h */,
+				F7916EBE25C1821100B6C303 /* YLMapTools.m */,
+				F7916EB625C1817300B6C303 /* YLLocationManager.h */,
+				F7916EB825C1817300B6C303 /* YLLocationManager.m */,
+				F7916ECF25C185B600B6C303 /* YLPlaceModel.h */,
+				F7916ED025C185B600B6C303 /* YLPlaceModel.m */,
+			);
+			path = ToolsGroup;
+			sourceTree = "<group>";
+		};
+		F7916EC225C1846000B6C303 /* ViewsGroup */ = {
+			isa = PBXGroup;
+			children = (
+				F7916EC325C1846000B6C303 /* MKMarkerView.h */,
+				F7916EC425C1846000B6C303 /* MKMarkerView.m */,
+			);
+			path = ViewsGroup;
+			sourceTree = "<group>";
+		};
+		F7916EC525C1846000B6C303 /* ControllersGroup */ = {
+			isa = PBXGroup;
+			children = (
+				F7916EC725C1846000B6C303 /* ViewController.h */,
+				F7916EC625C1846000B6C303 /* ViewController.m */,
+				F7916ECB25C1848800B6C303 /* YLRouteViewController.h */,
+				F7916ECC25C1848800B6C303 /* YLRouteViewController.m */,
+			);
+			path = ControllersGroup;
 			sourceTree = "<group>";
 		};
 		F7A1A02825B99B5000911238 /* PhotoAlbumGroup */ = {
@@ -240,20 +274,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A7EBEAC2540136F000921C7 /* ViewController.m in Sources */,
-				1A7EBEC5254013D8000921C7 /* MKMapTools.m in Sources */,
+				F7916EC825C1846000B6C303 /* MKMarkerView.m in Sources */,
 				F7A1A04825B99B5000911238 /* AlbumGroupTableCell.m in Sources */,
 				F7A1A04A25B99B5000911238 /* UIBarButtonItem+PhotoBarLeftItem.m in Sources */,
 				F7A1A04625B99B5000911238 /* PhotosManager.m in Sources */,
 				F7A1A04B25B99B5000911238 /* PHAsset+MediaStreams.m in Sources */,
+				F7916ECD25C1848800B6C303 /* YLRouteViewController.m in Sources */,
 				F7A1A04525B99B5000911238 /* AlbumGroupViewController.m in Sources */,
 				F7A1A04D25B99B5000911238 /* EditPhotoViewController.m in Sources */,
 				1A7EBEA62540136F000921C7 /* AppDelegate.m in Sources */,
 				F7A1A04925B99B5000911238 /* AlbumPhotoViewController.m in Sources */,
-				1A7EBEC4254013D8000921C7 /* MKMarkerView.m in Sources */,
+				F7916EC925C1846000B6C303 /* ViewController.m in Sources */,
+				F7916EBF25C1821100B6C303 /* YLMapTools.m in Sources */,
+				F7916ED125C185B600B6C303 /* YLPlaceModel.m in Sources */,
 				1A7EBEB725401370000921C7 /* main.m in Sources */,
 				F7A1A04325B99B5000911238 /* AlbumMainViewController.m in Sources */,
-				F7A48CE325BEAAEC0085B372 /* YLLocationManager.m in Sources */,
+				F7916EBB25C1817300B6C303 /* YLLocationManager.m in Sources */,
 				F7A1A04725B99B5000911238 /* AlbumPhotoCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

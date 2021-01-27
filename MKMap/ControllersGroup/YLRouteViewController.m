@@ -1,17 +1,17 @@
 //
-//  ViewController.m
+//  YLRouteViewController.m
 //  MKMap
 //
-//  Created by 苏沫离 on 2020/10/21.
+//  Created by long on 2021/1/27.
 //
 
-#import "ViewController.h"
+#import "YLRouteViewController.h"
 #import "MKMarkerView.h"
-#import "MKMapTools.h"
+#import "YLMapTools.h"
 #import "AlbumMainViewController.h"
 #import "PhotosManager.h"
 
-@interface ViewController ()
+@interface YLRouteViewController ()
 <MKMapViewDelegate>
 
 @property (nonatomic ,strong) MKMapView *mapView;
@@ -19,7 +19,7 @@
 @property (nonatomic ,strong) MKMarker *horsemanMarker;//骑手
 @end
 
-@implementation ViewController
+@implementation YLRouteViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,10 +41,10 @@
         [self.mapView removeOverlay:obj];
     }];
     
-    [MKMapTools routePlanWithStart:self.horsemanMarker.coordinate end:self.userMarker.coordinate handler:^(MKDirectionsResponse * _Nullable response, NSError * _Nullable error) {
+    [YLMapTools routePlanWithStart:self.horsemanMarker.coordinate end:self.userMarker.coordinate handler:^(MKDirectionsResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"路线条数 ===== %lu", (unsigned long)response.routes.count);
-        MKRoute *route = [MKMapTools getFastestTimeRouteWithRoutes:response.routes];
-        self.horsemanMarker.title = [NSString stringWithFormat: @"预计 %@ 分送达",[MKMapTools arriveTimeByRoute:route]];
+        MKRoute *route = [YLMapTools getFastestTimeRouteWithRoutes:response.routes];
+        self.horsemanMarker.title = [NSString stringWithFormat: @"预计 %@ 分送达",[YLMapTools arriveTimeByRoute:route]];
         //添加线路到MapView中
         [self.mapView addOverlay:route.polyline];
     }];

@@ -2,11 +2,12 @@
 //  YLLocationManager.h
 //  MKMap
 //
-//  Created by long on 2021/1/25.
+//  Created by 苏沫离 on 2020/10/21.
 //
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "YLPlaceModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

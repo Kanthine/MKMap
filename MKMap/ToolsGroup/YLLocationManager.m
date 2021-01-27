@@ -2,7 +2,7 @@
 //  YLLocationManager.m
 //  MKMap
 //
-//  Created by long on 2021/1/25.
+//  Created by 苏沫离 on 2020/10/21.
 //
 
 #import "YLLocationManager.h"
@@ -25,7 +25,6 @@ double getSpaceFromeCoordinate(CLLocationCoordinate2D coordinate1 ,CLLocationCoo
 @end
 
 @implementation YLLocationManager
-
 
 - (void)dealloc{
     [NSNotificationCenter.defaultCenter removeObserver:self];
@@ -65,7 +64,35 @@ double getSpaceFromeCoordinate(CLLocationCoordinate2D coordinate1 ,CLLocationCoo
 
 /// 获取位置
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            __weak typeof(self) weakSelf = self;
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            
+            for (int i = 0; i < locations.count; i ++) {
+                CLLocation *location = locations.firstObject;
+                //根据经纬度反向地理编译出地址信息
+                [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *array, NSError *error){
+                    if (array.count > 0){
+                        CLPlacemark *placemark = array.firstObject;
+                        YLPlaceModel *place = [YLPlaceModel modelObjectWithCLPlacemark:placemark];
+                        NSLog(@"place = %@", place);
+                        if (i == 0) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+//                                weakSelf.place = place;
+                            });
+                        }else{
+//                            [weakSelf.nearbyPlaces addObject:place];
+                        }
+                    }else if (error == nil && [array count] == 0){
+                        NSLog(@"No results were returned.");
+                    }else if (error != nil){
+                        NSLog(@"An error occurred = %@", error);
+                    }
+                }];
+                
+                NSLog(@"---------------------------");
+            }
+        });
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
