@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import "MKMarkerView.h"
 #import "MKMapTools.h"
+#import "AlbumMainViewController.h"
+#import "PhotosManager.h"
 
 @interface ViewController ()
 <MKMapViewDelegate>
@@ -24,6 +26,9 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.mapView];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButtonItemClock)];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -48,6 +53,22 @@
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     self.mapView.frame = self.view.bounds;
+}
+
+#pragma mark - response click
+
+- (void)rightBarButtonItemClock{
+//    AlbumMainViewController *albumVC = [[AlbumMainViewController alloc] init];
+//    albumVC.albumType = AlbumResourcesTypeLibrary;
+//    [self presentViewController:albumVC animated:YES completion:nil];
+    
+    [PhotosManager loadAllPhotosCompletionBlock:^(NSMutableArray<PHAsset *> *listArray) {
+       
+        [listArray enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"location: %@ ------ date: %@",obj.location,obj.creationDate);
+        }];
+        
+    }];
 }
 
 #pragma mark - MKMapViewDelegate
