@@ -1,0 +1,23 @@
+/* 
+  PhotoAlbumLocalized.strings
+  MyYummy
+
+  Created by 苏沫离 on 2019/8/9.
+  Copyright © 2019 YLAlbumTool. All rights reserved.
+*/
+
+
+"相簿列表" = "Album list";
+"取消"= "cancel";
+"相册" = "Photos";
+"所有照片" = "All photos";
+"确定" = "confirm";
+"照片最多不超过%ld张" = "No more than %ld photos";
+"请选择至少1张图片" = "Please select at least 1 picture";
+"保存" = "save";
+"%ld 张照片" = "%ld photos";
+"拍摄照片" = "take photos";
+"云下载中..." = "downloading...";
+
+"App需要你的同意,访问相机,拍摄照片发布菜品评价、设置头像" = "App needs your consent, visit camera, take photos and publish dishes";
+"App需要你的同意,访问相册,选择照片发布菜品评价、设置头像" = "App needs your consent, access album, select photo to post food evaluation";
